@@ -1,0 +1,16 @@
+# Ignore fish state
+.config/fish/fish_variables
+
+# Ignore DankMaterialShell state and internal repos
+.config/DankMaterialShell/.changelog-*
+.config/DankMaterialShell/.firstlaunch
+.config/DankMaterialShell/plugins/.repos/**
+**/plugins/**/.git/**
+
+# Ignore backup and old config files
+**/*.backup*
+**/*.old
+**/*setupfail
+.config/hypr/backeduphyprland.conf
+.config/hypr/hyprland.conf.backup*
+.config/ghostty/config.backup*

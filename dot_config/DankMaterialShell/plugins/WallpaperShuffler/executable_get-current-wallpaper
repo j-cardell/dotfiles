@@ -1,0 +1,36 @@
+#!/usr/bin/bash
+
+WALLPAPER_FOLDER="${1:-"$HOME/Pictures"}"
+WALLPAPER_INFO_FOLDER="${WALLPAPER_FOLDER}/.dms-wallpaper-shuffler"
+
+# Exit if shuffle info doesn't exist
+if [ ! -d "$WALLPAPER_INFO_FOLDER" ] || [ ! -f "$WALLPAPER_INFO_FOLDER/wallpaper_current_index" ]; then
+    echo ""
+    echo ""
+    echo "0"
+    echo "0"
+    exit 0
+fi
+
+# Get current index (this is the index of the wallpaper that was just set)
+# The shuffle-wallpapers script saves (index + 1) after setting wallpaper at (index + 1)
+# So current_index in the file = the line number (sed 1-based) of the current wallpaper
+current_index=$(cat "$WALLPAPER_INFO_FOLDER/wallpaper_current_index")
+total=$(cat "$WALLPAPER_INFO_FOLDER/wallpaper_total")
+
+# Get current wallpaper (full path) - it's at line current_index (sed is 1-based)
+current_wallpaper=$(sed -n "${current_index}p" "$WALLPAPER_INFO_FOLDER/wallpaper_shuffle_list")
+
+# Calculate next wallpaper index (0-based)
+# current_index is 1-based for sed, so convert to 0-based, add 1, mod total, convert back
+next_index_0based=$(((current_index) % total))
+next_index=$((next_index_0based + 1))
+
+# Get next wallpaper (full path)
+next_wallpaper=$(sed -n "${next_index}p" "$WALLPAPER_INFO_FOLDER/wallpaper_shuffle_list")
+
+# Output: current_wallpaper, next_wallpaper, current_index, total
+echo "$current_wallpaper"
+echo "$next_wallpaper"
+echo "$current_index"
+echo "$total"

@@ -1,0 +1,15 @@
+{
+	"id": "wallpaperShufflerPlugin",
+	"type": "widget",
+	"name": "Wallpaper Shuffler",
+	"description": "Shuffles wallpapers, found recursively inside the folder you specify. Creates a .dms-wallpaper-shuffler folder in your wallpaper directory to store shuffler info, delete it to re-shuffle the same folder. Includes a DankBar widget to view current and next wallpapers.",
+	"version": "1.0.1",
+	"author": "Daniel-42-z",
+	"icon": "wallpaper",
+	"component": "./WallpaperShufflerWidget.qml",
+	"settings": "./WallpaperShufflerSettings.qml",
+	"permissions": [
+		"settings_read",
+		"settings_write"
+	]
+}

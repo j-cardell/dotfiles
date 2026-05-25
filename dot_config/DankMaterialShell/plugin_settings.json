@@ -1,0 +1,21 @@
+{
+  "calculator": {
+    "enabled": true,
+    "trigger": "",
+    "noTrigger": true
+  },
+  "wallpaperShufflerPlugin": {
+    "enabled": false
+  },
+  "dankActions": {
+    "enabled": false
+  },
+  "dankKDEConnect": {
+    "enabled": true
+  },
+  "dankLauncherKeys": {
+    "enabled": true,
+    "noTrigger": true,
+    "trigger": ""
+  }
+}
