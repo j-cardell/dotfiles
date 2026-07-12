@@ -20,3 +20,7 @@ source "/home/jon/.openclaw/completions/openclaw.fish"
 
 alias keybinds="vscodium ~/.config/hypr/config/keybinds.conf"
 alias kb="keybinds"
+
+# >>> grok installer >>>
+fish_add_path $HOME/.grok/bin
+# <<< grok installer <<<
