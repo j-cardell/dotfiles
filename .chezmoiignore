@@ -14,3 +14,9 @@
 .config/hypr/backeduphyprland.conf
 .config/hypr/hyprland.conf.backup*
 .config/ghostty/config.backup*
+
+# Ignore dynamically generated matugen files
+.config/DankMaterialShell/firefox.css
+.config/DankMaterialShell/zen.css
+.config/ghostty/themes/dankcolors
+.config/hypr/dms/colors.lua
