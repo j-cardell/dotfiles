@@ -46,6 +46,12 @@ hl.config({
 		disable_hyprland_logo = true,
 		disable_splash_rendering = true,
 	},
+	render = {
+		direct_scanout = false,
+	},
+	xwayland = {
+		force_zero_scaling = true,
+	},
 	dwindle = {
 		preserve_split = true,
 	},
