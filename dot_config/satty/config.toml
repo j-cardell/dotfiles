@@ -1,0 +1,11 @@
+[color-palette]
+palette = [
+    "#ff0000ff", # Red (First item = startup color)
+    "#4cd137ff", # Green
+    "#00a8ffff", # Blue
+    "#fbc531ff", # Yellow
+    "#e84118ff", # Dark Red
+    "#9c88ffff", # Purple
+    "#ffffffff", # White
+    "#000000ff"  # Black
+]
