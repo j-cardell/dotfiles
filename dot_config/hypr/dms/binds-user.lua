@@ -26,7 +26,5 @@ hl.bind("SUPER + H", hl.dsp.exec_cmd("dms ipc call keybinds toggle hyprland"))
 hl.unbind("CTRL + Print")
 hl.bind("CTRL + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | satty --filename - --early-exit copy --actions-on-enter save-to-clipboard --copy-command wl-copy --initial-tool arrow'))
 
-
-
-
-
+-- 6. Unbind CTRL + SHIFT + R
+hl.unbind("CTRL + SHIFT + R")
