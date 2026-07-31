@@ -9,6 +9,9 @@ hl.window_rule({
 	move = { 1880, 1060 },
 	pin = true,
 	border_size = 0,
+	no_initial_focus = true,
+	focus_on_activate = false,
+	suppress_event = "activate",
 })
 
 hl.window_rule({
@@ -18,6 +21,9 @@ hl.window_rule({
 	move = { 1880, 1060 },
 	pin = true,
 	border_size = 0,
+	no_initial_focus = true,
+	focus_on_activate = false,
+	suppress_event = "activate",
 })
 
 -- --- Steam Fixes ---
@@ -74,6 +80,14 @@ hl.window_rule({
 	match = { class = "^([Tt]hunar)$" },
 	float = true,
 })
+hl.window_rule({
+	match = { class = "^([Bb]itwarden|com\\.bitwarden\\.desktop|.*nngceckbapebfimnlniiiahkandclblb.*)$" },
+	float = true,
+})
+hl.window_rule({
+	match = { title = "^Bitwarden.*" },
+	float = true,
+})
 
 -- --- Border Rules ---
 hl.window_rule({
@@ -105,6 +119,15 @@ hl.window_rule({ match = { title = ".*pepperbox.*" }, opaque = true, no_dim = tr
 hl.window_rule({ match = { title = ".*Kick.*" }, opaque = true, no_dim = true, opacity = "1.0 override 1.0 override" })
 hl.window_rule({ match = { title = ".*kick.*" }, opaque = true, no_dim = true, opacity = "1.0 override 1.0 override" })
 
+
+-- --- Flameshot ---
+hl.window_rule({
+	match = { class = "^(flameshot)$" },
+	float = true,
+	move = "0 0",
+	pin = true,
+	no_anim = true,
+})
 
 -- --- Layer Rules ---
 hl.layer_rule({
