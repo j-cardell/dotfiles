@@ -1,9 +1,10 @@
 -- DMS user keybind overrides (edit via Control Center or dms; do not remove this header)
 
-hl.unbind("CTRL + Print")
-hl.bind("CTRL + Print", hl.dsp.exec_cmd('grimblast --freeze save area - | satty --filename - --early-exit copy --actions-on-enter save-to-clipboard --copy-command wl-copy --initial-tool arrow'))
 hl.unbind("Print")
 hl.bind("Print", hl.dsp.exec_cmd("grimblast --freeze copy area"))
+hl.unbind("CTRL + Print")
+hl.bind("CTRL + Print", hl.dsp.exec_cmd('grimblast --freeze save area - | satty --filename - --early-exit copy --actions-on-enter save-to-clipboard --copy-command wl-copy --initial-tool arrow'))
+hl.unbind("ALT + Print")
 hl.unbind("SUPER + H")
 hl.bind("SUPER + H", hl.dsp.exec_cmd("dms ipc call keybinds toggle hyprland"))
 hl.unbind("SUPER + L")

@@ -88,6 +88,8 @@ hl.window_rule({
 	float = true,
 })
 hl.window_rule({ match = { class = "^(zoom)$" }, float = true })
+hl.window_rule({ match = { class = "^([Bb]itwarden|com\\.bitwarden\\.desktop|.*nngceckbapebfimnlniiiahkandclblb.*)$" }, float = true })
+hl.window_rule({ match = { title = "^Bitwarden.*" }, float = true })
 hl.layer_rule({ match = { namespace = "^(quickshell)$" }, no_anim = true })
 hl.layer_rule({ match = { namespace = "^dms:.*" }, no_anim = true })
 
